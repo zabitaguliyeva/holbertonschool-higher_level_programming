@@ -7,4 +7,4 @@ def element_at(my_list, idx):
     else:
         for i in my_list:
             if idx == i:
-                return i
+                return i + 1
