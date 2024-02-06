@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Eval is magic"""
+"""Change representation"""
 
 
 class Rectangle:
     """Instantiation with optional width and height"""
     number_of_instances = 0
-
+    print_symbol = "#"
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
