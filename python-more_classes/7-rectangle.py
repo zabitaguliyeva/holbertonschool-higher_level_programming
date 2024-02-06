@@ -6,6 +6,7 @@ class Rectangle:
     """Instantiation with optional width and height"""
     number_of_instances = 0
     print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -48,7 +49,7 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ""
         for i in range(self.__height):
-            mylist.append("#" * self.__width)
+            mylist.append(str(self.print_symbol) * self.__width)
         return "\n".join(mylist)
 
     def __repr__(self):
