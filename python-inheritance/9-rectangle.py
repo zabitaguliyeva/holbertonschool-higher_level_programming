@@ -2,16 +2,7 @@
 """Geometry module"""
 
 
-class BaseGeometry:
-    """Pass"""
-    def area(self):
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+BaseGeometry = __import__('8-rectangle').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
@@ -22,5 +13,9 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-    def __str__(self):
+    def area(self):
         return self.__width * self.__height
+
+    def __str__(self):
+        c = __class__.__name__
+        return("[{}] {}/{}".format(c, self.__width, self.__height))
