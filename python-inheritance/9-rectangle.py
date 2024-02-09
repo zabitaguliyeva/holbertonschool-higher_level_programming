@@ -18,4 +18,4 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         c = __class__.__name__
-        return("[{}] {}/{}".format(c, self.__width, self.__height))
+        return ("[{}] {}/{}".format(c, self.__width, self.__height))
