@@ -15,5 +15,5 @@ class Square(Rectangle):
         return self.__size * self.__size
 
     def __str__(self):
-        c = self.__class__.__name__
+        c = __class__.__name__
         return ("[{}] {}/{}".format(c, self.__size, self.__size))
