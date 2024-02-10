@@ -3,5 +3,5 @@
 
 def read_file(filename=""):
     """Function"""
-    with open("my_file_0.txt", "r") as filename:
-        print(filename.read(), end ="")
+    with open(filename, "r") as f:
+        print(f.read(), end="")
