@@ -11,7 +11,7 @@ filename = "add_item.json"
 
 try:
     my_list = load_from_json_file(filename)
-    my_list.extend(args[1:])
 except FileNotFoundError:
     my_list = []
+my_list.extend(args[1:])
 save_to_json_file(my_list, filename)
