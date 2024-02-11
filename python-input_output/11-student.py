@@ -21,4 +21,3 @@ class Student:
         """Student to disk and reload"""
         for key, value in json.items():
             setattr(self, key, value)
-
