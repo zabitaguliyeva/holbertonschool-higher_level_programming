@@ -16,4 +16,3 @@ class Student:
             return vars(self)
         else:
             return {i: getattr(self, i) for i in attrs if hasattr(self, i)}
-
