@@ -53,7 +53,7 @@ class Rectangle(Base):
         """Validator Function"""
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
-        elif equal and value < 0:
+        elif equal and value <= 0:
             raise ValueError("{} must be > 0".format(name))
-        elif not equal and value <= 0:
+        elif not equal and value < 0:
             raise ValueError("{} must be >= 0".format(name))
