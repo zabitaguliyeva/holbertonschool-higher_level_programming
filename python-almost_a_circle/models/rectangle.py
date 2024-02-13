@@ -64,8 +64,10 @@ class Rectangle(Base):
 
     def display(self):
         """Display #0"""
+        for i in range(self.__y):
+            print()
         for i in range(self.__height):
-            print("#" * self.__width)
+            print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
         return ("[{}] ({}) {}/{} - {}/{}".format(
@@ -75,10 +77,3 @@ class Rectangle(Base):
             self.__y,
             self.__width,
             self.__height))
-
-    def display(self):
-        """Display rectangle"""
-        for i in range(self.y):
-            print()
-        for i in range(self.__height):
-            print(" " * self.__x, "#" * self.__width)
