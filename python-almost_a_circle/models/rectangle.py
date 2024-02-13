@@ -19,8 +19,8 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        self.integer_validator(value, "width", False)
         self.__width = value
-        self.__width.integer_validator(value, "width", False)
 
     @property
     def height(self):
@@ -28,7 +28,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        self.__height.integer_validator(value, "height", False)
+        self.integer_validator(value, "height", False)
         self.__height = value
 
     @property
@@ -37,7 +37,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        self.__x.integer_validator(value, "x")
+        self.integer_validator(value, "x")
         self.__x = value
 
     @property
@@ -46,7 +46,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        self.__y.integer_validator(value, "y")
+        self.integer_validator(value, "y")
         self.__y = value
 
     def integer_validator(self, value, name, equal=True):
