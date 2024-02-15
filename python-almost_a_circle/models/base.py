@@ -32,4 +32,11 @@ class Base():
             for obj in list_objs:
                 data.append(obj.to_dictionary())
         with open(filename, "w", encoding="utf-8") as f:
-                f.write(cls.to_json_string(data))
+            f.write(cls.to_json_string(data))
+
+    def from_json_string(json_string):
+        """From Json String"""
+        if json_string is None or json_string == "":
+            return []
+        else:
+            return json.loads(json_string)
