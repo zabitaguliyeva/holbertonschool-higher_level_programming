@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
     This module defines the State class with attributes id ,name and cities
