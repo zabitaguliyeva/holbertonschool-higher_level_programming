@@ -7,11 +7,11 @@ import MySQLdb
 import sys
 
 
-if __name__ == "main":
+if __name__ == "__main__":
 
     db = MySQLdb.connect(
             host="localhost",
-            username = sys.argv[1],
+            user = sys.argv[1],
             password = sys.argv[2], 
             db = sys.argv[3],
             port = 3306
