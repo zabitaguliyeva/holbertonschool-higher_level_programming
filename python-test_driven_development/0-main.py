@@ -9,7 +9,8 @@ try:
     print(add_integer(4, "School"))
 except Exception as e:
     print(e)
-try:
-    print(add_integer(None))
-except Exception as e:
-    print(e)
+    try:
+        print(add_integer(None))
+    except Exception as e:
+        print(e)
+print(add_integer(-5,5))

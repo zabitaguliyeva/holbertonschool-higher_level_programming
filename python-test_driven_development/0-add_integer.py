@@ -1,11 +1,22 @@
 #!/usr/bin/python3
-"""Integers addition"""
+"""This module adds two integers.
+
+>>> add_integer(4, 5)
+9
+"""
 
 
 def add_integer(a, b=98):
-    """Integers addition"""
-    if not isinstance(a, (int, float)):
-        raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
-        raise TypeError("b must be an integer")
+    """Adds two integers.
+    Args:
+        a: the first int
+        b: the second int, default 98.
+    """
+
+    if type(a) not in (int, float):
+        raise TypeError('a must be an integer')
+
+    if type(b) not in (int, float):
+        raise TypeError('b must be an integer')
+
     return int(a) + int(b)
